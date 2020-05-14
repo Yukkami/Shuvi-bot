@@ -21,21 +21,6 @@ client.remove_command('help')
 
 #Events
 
-@client.event
-async def on_message(ctx):
-    if ctx.content.startswith("Nekos are furries"):
-        channel = ctx.channel
-        furry_embed = discord.Embed(
-        title = "NO THEYRE NOT",
-        description = f"According to wikipedia (https://en.wikipedia.org/wiki/Furry_fandom)\nAnd various furry froums, furries are **animals with human personality/traits**\nNekos are **humans with animal personality/traits**",
-        colour = discord.Colour.purple()
-        )
-        furry_embed.set_footer(text=f"For {ctx.author.name}#{ctx.author.discriminator}",
-        icon_url=f"{ctx.author.avatar_url}")
-        await channel.send(embed=furry_embed)
-
-
-
 game = discord.Game("$Help for well help")
 
 
