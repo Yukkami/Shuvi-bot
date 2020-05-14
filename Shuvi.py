@@ -11,6 +11,8 @@ import os
 
 client = commands.Bot(command_prefix = "$", case_insensitive=True)
 
+
+
 #removing default help command
 
 client.remove_command('help')
@@ -2067,4 +2069,4 @@ async def hug_error(ctx, error):
 
 #Bot Token          I change it afterwads so dont think you can try something :)
 
-client.run("NTk1MzQ5MTkzODk2MjMwOTQw.Xqne5g.Tu8mfxTU_GV6hNyGJcfRKlYG7RE")
+client.run(os.environ["token"])
