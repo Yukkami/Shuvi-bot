@@ -18,11 +18,9 @@ client = commands.Bot(command_prefix = "$", case_insensitive=True)
 client.remove_command('help')
 
 
-
 #Events
 
 game = discord.Game("$Help for well help")
-
 
 
 @client.event
@@ -30,6 +28,12 @@ async def on_ready():
     await client.change_presence(status=discord.Status.online, activity=game)
     print("Successfully connected to the cluster network, Shuvi Üc207Pr4f57t9 online!")
 
+
+@client.event
+async def on_command_error(ctx, error):
+    if isinstance(error, CommandNotFound):
+        return
+    raise error
 
 
 #Help commands
