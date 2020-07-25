@@ -29,13 +29,6 @@ async def on_ready():
     print("Successfully connected to the cluster network, Shuvi Üc207Pr4f57t9 online!")
 
 
-@client.event
-async def on_command_error(ctx, error):
-    if isinstance(error, CommandNotFound):
-        return
-    raise error
-
-
 #Help commands
 
 @client.command()
@@ -403,7 +396,7 @@ async def rate(ctx, *, what_to_rate):
 
 
 
-@client.command()
+@client.command(aliases=["8ball"])
 async def _8ball(ctx, *, question):
     responses = [" It is certain.",
                  " It is decidedly so.",
