@@ -321,7 +321,7 @@ async def spank(ctx, member : discord.Member):
     fun_embed.set_footer(text=f"Requested by {ctx.author.name}#{ctx.author.discriminator}",
     icon_url=f"{ctx.author.avatar_url}")
 
-    await ctx.send(embed=nsfw_embed)
+    await ctx.send(embed=fun_embed)
 
 
 
@@ -483,7 +483,7 @@ async def ngif(ctx):
     sfw_embed.set_footer(text=f"Requested by {ctx.author.name}#{ctx.author.discriminator}",
     icon_url=f"{ctx.author.avatar_url}")
 
-    await ctx.send(embed=nsfw_embed)
+    await ctx.send(embed=sfw_embed)
 
 
 @client.command()
@@ -546,14 +546,14 @@ async def foxgirl(ctx):
 async def kemonomimi(ctx):
 
     pic = nekos.img("kemonomimi")
-    ssfw_embed = discord.Embed(
+    sfw_embed = discord.Embed(
     title="Kemonomimi",
     description="Here you go a kemonomimi",
     colour=discord.Colour.purple()
     )
 
     sfw_embed.set_image(url=f"{pic}")
-    ssfw_embed.set_footer(text=f"Requested by {ctx.author.name}#{ctx.author.discriminator}",
+    sfw_embed.set_footer(text=f"Requested by {ctx.author.name}#{ctx.author.discriminator}",
     icon_url=f"{ctx.author.avatar_url}")
 
     await ctx.send(embed=sfw_embed)
