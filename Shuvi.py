@@ -2051,4 +2051,4 @@ async def hug_error(ctx, error):
 
 #Bot Token          I change it afterwads so dont think you can try something :)
 
-client.run("NTk1MzQ5MTkzODk2MjMwOTQw.XRpsJA.JwmKnQ_oy7rpRly1HbVJ7o1Kj-s")
+client.run(os.environ["token"])
