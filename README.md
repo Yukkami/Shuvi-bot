@@ -1,10 +1,7 @@
 # Shuvi.py
 
-Just a discord bot i made while bored. Uses nekos api for images and stuff. Not the most advanced but im a beginner at this
+Just an average discord bot, has a strong focus on hentai commands
 
 ## What you need to run it
 
-+ Discord.py
-+ Nekos.py
-+ Dnspython
-+ A brain/Google
+Install everything in requirements.txt
