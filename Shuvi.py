@@ -566,7 +566,7 @@ async def kemonomimi(ctx):
 @client.command()
 async def nsauce(ctx, *, nsauce):
     if  (discord.TextChannel.is_nsfw(ctx.channel) is True):
-        if nsauce.content.startswith("#"):
+        if nsauce.startswith("#"):
             msg = nsauce[1:]
 
             nsfw_embed = discord.Embed(
