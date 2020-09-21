@@ -566,12 +566,12 @@ async def kemonomimi(ctx):
 @client.command()
 async def nsauce(ctx, *, nsauce):
     if  (discord.TextChannel.is_nsfw(ctx.channel) is True):
-        if ctx.message.contains("#"):
+        if nsauce.content.startswith("#"):
             msg = nsauce[1:]
 
             nsfw_embed = discord.Embed(
             title="Nhentai Sauce",
-            description=f"https://www.nhentai.net/g/{nsauce}",
+            description=f"https://www.nhentai.net/g/{msg}",
             colour=discord.Colour.purple()
             )
             nsfw_embed.set_footer(text=f"For {ctx.author.name}#{ctx.author.discriminator}",
