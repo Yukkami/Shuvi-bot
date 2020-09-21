@@ -321,7 +321,8 @@ async def spank(ctx, member : discord.Member):
     fun_embed.set_footer(text=f"Requested by {ctx.author.name}#{ctx.author.discriminator}",
     icon_url=f"{ctx.author.avatar_url}")
 
-    await ctx.send(embed=fun_embed)
+    if (discord.TextChannel.is_nsfw(ctx.channel) is True):
+        await ctx.send(embed=fun_embed)
 
 
 
@@ -565,16 +566,29 @@ async def kemonomimi(ctx):
 @client.command()
 async def nsauce(ctx, *, nsauce):
     if  (discord.TextChannel.is_nsfw(ctx.channel) is True):
+        if ctx.message.contains("#"):
+            msg = nsauce[1:]
 
-        nsfw_embed = discord.Embed(
-        title="Nhentai Sauce",
-        description=f"https://www.nhentai.net/g/{nsauce}",
-        colour=discord.Colour.purple()
-        )
-        nsfw_embed.set_footer(text=f"For {ctx.author.name}#{ctx.author.discriminator}",
-        icon_url=f"{ctx.author.avatar_url}")
+            nsfw_embed = discord.Embed(
+            title="Nhentai Sauce",
+            description=f"https://www.nhentai.net/g/{nsauce}",
+            colour=discord.Colour.purple()
+            )
+            nsfw_embed.set_footer(text=f"For {ctx.author.name}#{ctx.author.discriminator}",
+            icon_url=f"{ctx.author.avatar_url}")
 
-        await ctx.send(embed=nsfw_embed)
+            await ctx.send(embed=nsfw_embed)
+
+        else:
+            nsfw_embed = discord.Embed(
+            title="Nhentai Sauce",
+            description=f"https://www.nhentai.net/g/{nsauce}",
+            colour=discord.Colour.purple()
+            )
+            nsfw_embed.set_footer(text=f"For {ctx.author.name}#{ctx.author.discriminator}",
+            icon_url=f"{ctx.author.avatar_url}")
+
+            await ctx.send(embed=nsfw_embed)
 
     else:
             nsfw_error_embed = discord.Embed(
