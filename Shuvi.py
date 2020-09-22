@@ -324,6 +324,19 @@ async def spank(ctx, member : discord.Member):
     if (discord.TextChannel.is_nsfw(ctx.channel) is True):
         await ctx.send(embed=fun_embed)
 
+    else:
+
+        nsfw_error_embed = discord.Embed(
+        title="Error",
+        description="Make sure this is a NSFW channel",
+        colour=discord.Colour.purple()
+        )
+        nsfw_error_embed.set_footer(text=f"For {ctx.author.name}#{ctx.author.discriminator}",
+        icon_url=f"{ctx.author.avatar_url}")
+        nsfw_error_embed.set_thumbnail(url="https://cdn.pixabay.com/photo/2017/02/12/21/29/false-2061132__340.png")
+
+        await ctx.send(embed=nsfw_error_embed)
+
 
 
 
