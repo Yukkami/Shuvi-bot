@@ -1,16 +1,13 @@
 # Imports
 
-import discord
-import random
+import discord, random, nekos, os
 from discord.ext import commands
 from discord.utils import get
-import nekos
-import os
+
 
 # Bot Prefix and making commands case insesnitive
 
 client = commands.Bot(command_prefix = "$", case_insensitive=True)
-
 
 
 #removing default help command
